@@ -1,5 +1,5 @@
 - name: Playbook for ping 
-  host: all
+  hosts: all
   tasks:
       - name: ping ths hosts
         ping: 
