@@ -2,7 +2,7 @@
   hosts: all
   vars:
       URL: www.ganesh gohane.com
-- tasks:
-    -  name: Print the URL msg
+  tasks:
+     - name: Print the URL msg
        debug: 
         msg: "Please vist{{URL}}" 
