@@ -1,0 +1,6 @@
+- name: Playbook for debuge
+  hosts: all
+  tasks: 
+    - name: print the msg 
+      debug: 
+        msg: "Ganesh Sudhakar Gohane"
