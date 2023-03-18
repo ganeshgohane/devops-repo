@@ -1,13 +1,11 @@
-- name: Playbook for globalvariable
+- name: playbook for debug
   hosts: all
-  vars:
-        URL: "www.google.com"
+  vars: 
+   URL: "www.ganesh.com"
   tasks:
-        - name: print hello world
-          debug:
-          msg: "Please visit {{URL}}"
-
-        - name: print hello world
-          debug:
-          msg: "Please visit {{URL}}"
-
+    - name: print hello world
+      debug:
+        msg: "Please visit {{ URL }}"
+    - name: print hello world
+      debug:
+       msg: "Please visit {{ URL }}"
