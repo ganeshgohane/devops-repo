@@ -1,7 +1,7 @@
 - name: Playbook for debug
   hosts: all
   vars_files: 
-  -./varFile
+  - ./varFile
   tasks: 
       - name: print hellow world
         debuge: 
