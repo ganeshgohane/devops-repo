@@ -3,11 +3,11 @@
   vars:
         URL: "www.google.com"
   tasks:
-        - name: "Print msg of variable"
+        - name: Print msg of variable
           debug:
           msg: "Please visit this {{URL}}"
-          
-        - name: "Print msg of variable"
+
+        - name: Print msg of variable
           debug:
           msg: "Please visit this {{URL}}"
 
