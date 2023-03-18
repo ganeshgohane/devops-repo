@@ -1,25 +1,25 @@
-Pipeline {
-    agent any
-      stages {
-         stage ('pull') {
+  pipeline {
+    agent any 
+    stages {
+        stage('PULL') { 
             steps {
                 git 'https://github.com/ganeshgohane/devops-repo.git'
             }
-          }
-          stage ('build'){
+        }
+        stage('Build') { 
             steps {
-                echo "pipeline build successfully"
+                echo 'PIPELINE BUILD SUCCESSFULLY'
             }
-          }
-          stage ('test'){
+        }
+        stage('Test') { 
             steps {
-                echo "pipeline test successfully"
+                echo 'PIPELINE TEST SUCCESSFULLY'
             }
-          }
-          stage ('deploy'){
+        }
+        stage('Deploy') { 
             steps {
-                echo "pipeline deploy successfully"
+                echo 'PIPELINE DEPLOY SUCCESSFULLY'
             }
-          }
-      }
-}
+        }
+    }
+} 

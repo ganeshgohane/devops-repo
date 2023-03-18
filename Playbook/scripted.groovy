@@ -1,16 +1,14 @@
-node {
-    stages{
-        stage('pull'){
-              git 'https://github.com/ganeshgohane/devops-repo.git'
-            }
-        stage ('build'){
-             echo "pipeline build successully"
-            }
-        stage ('test'){
-            echo "pipeline test successfully"
-           }
-        stage ('deploy'){
-            echo "pipeline deploy successfully"
-           }
+node {  
+    stage('Pull') { 
+         git 'https://github.com/ganeshgohane/devops-repo.git'
+    }
+    stage('Build') { 
+       echo 'PIPELINE BUILD SUCCESSFULLY'  
+    }
+    stage('Test') { 
+        echo 'PIPELINE TEST SUCCESSFULLY'
+    }
+    stage('Deploy') { 
+        echo 'PIPELINE DEPLOY SUCCESSFULLY'
     }
 }
