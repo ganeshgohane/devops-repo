@@ -1,7 +1,7 @@
 node {
     stages{
         stage('pull'){
-            echo "pipeline pull successfully"
+              git 'https://github.com/ganeshgohane/devops-repo.git'
             }
         stage ('build'){
              echo "pipeline build successully"

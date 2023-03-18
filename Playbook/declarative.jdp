@@ -3,7 +3,7 @@ Pipeline {
       stages {
          stage ('pull') {
             steps {
-                echo "pipeline pull successfully"
+                git 'https://github.com/ganeshgohane/devops-repo.git'
             }
           }
           stage ('build'){
