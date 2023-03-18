@@ -1,0 +1,25 @@
+Pipeline {
+    agent any
+      stages {
+         stage ('pull') {
+            steps {
+                echo "pipeline pull successfully"
+            }
+          }
+          stage ('build'){
+            steps {
+                echo "pipeline build successfully"
+            }
+          }
+          stage ('test'){
+            steps {
+                echo "pipeline test successfully"
+            }
+          }
+          stage ('deploy'){
+            steps {
+                echo "pipeline deploy successfully"
+            }
+          }
+      }
+}
