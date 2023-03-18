@@ -1,0 +1,16 @@
+- name: Playbook for debug
+  hosts: all
+  vars_files: 
+  -./varFile
+  tasks: 
+      - name: print hellow world
+        debuge: 
+          msg: "Please visit {{URL}}"
+      - name: print hellow world
+        debuge: 
+          msg: "Please visit {{URL}}"
+      - name: print hellow world
+        debuge: 
+          msg: "Please visit {{URL}}"
+  vars:
+       URL: "local.cloudblitz.in"
