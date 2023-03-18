@@ -1,8 +1,8 @@
-pipelineJob('scriptedpipeline_converted') {
+pipelineJob('bkup2') {
 
   description('')
 
-  displayName('scriptedpipeline_converted')
+  displayName('bkup2')
 
   configure { flowdefinition ->
 
@@ -16,7 +16,7 @@ pipelineJob('scriptedpipeline_converted') {
 
           'hudson.plugins.git.UserRemoteConfig' {
 
-            'url'('https://github.com/ganeshgohane/devops-repo.git')
+            'url'('https://github.com/ganeshgohane/b-19.git')
 
           }
 
