@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull'){
+            steps {
+                git 'https://github.com/shubhamkalsait/studentapp-ui.git'
+            }
+        }
+        stage('Build'){
+            steps {
+                sh 'mvn clean package '
+            }
+        }
+        stage('Test'){
+            steps {
+                 withSonarQubeEnv('sonar') {
+                     sh 'mvn sonar:sonar'
+                }
+            }
+        }
+         stage('Quality check'){
+            steps {timeout(time: 1, unit: 'HOURS') {
+        waitForQualityGate abortPipeline: true, credentialsId: 'sonarqubetoken'
+                }
+            }
+        }
+        stage('Deploy'){
+            steps {
+                echo 'Deploy Successful by ganesh'
+            }
+        }
+    }
+}
