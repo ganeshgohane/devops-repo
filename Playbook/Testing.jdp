@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
     stages {
         stage('Pull'){
@@ -13,20 +13,14 @@ pipeline {
         }
         stage('Test'){
             steps {
-                 withSonarQubeEnv('sonar') {
+                withSonarQubeEnv('sonar') {
                      sh 'mvn sonar:sonar'
-                }
-            }
-        }
-         stage('Quality check'){
-            steps {timeout(time: 1, unit: 'HOURS') {
-        waitForQualityGate abortPipeline: true, credentialsId: 'sonarqubetoken'
                 }
             }
         }
         stage('Deploy'){
             steps {
-                echo 'Deploy Successful by ganesh'
+                echo 'Deploy Successful by shubham'
             }
         }
     }
